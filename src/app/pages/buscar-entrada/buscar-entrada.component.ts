@@ -33,7 +33,7 @@ export class BuscarEntradaComponent {
   }
 
   buscarEntradasDate() {
-    this.http.get<any[]>(`http://localhost:5000/api/entradas/buscarFecha?fecha=${this.fecha}`, {withCredentials:true}).subscribe(
+    this.http.get<any[]>(`https://diarioinso.onrender.com/api/entradas/buscarFecha?fecha=${this.fecha}`, {withCredentials:true}).subscribe(
       (response) => {
         this.entradas = response.map(entrada => ({
           ...entrada,

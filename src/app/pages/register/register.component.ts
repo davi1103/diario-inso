@@ -51,7 +51,7 @@ export class RegisterComponent {
     if(this.forms.valid){
 
       const formData = this.forms.value;
-      this.http.post('http://localhost:5000/api/usuarios/registro', formData,{responseType: 'text'}).subscribe(
+      this.http.post('https://diarioinso.onrender.com/api/usuarios/registro', formData,{responseType: 'text'}).subscribe(
         response => {
           alert(response);
           this.router.navigate(['/login']);

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EntradaService {
 
-  private urlApi = 'http://localhost:5000/api/entradas';
+  private urlApi = 'https://diarioinso.onrender.com/api/entradas';
 
   constructor(private http: HttpClient) { }
 

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private urlApi = 'http://localhost:5000/api/usuarios'; // Asegúrate de reemplazar esto con la URL real de tu API
+  private urlApi = 'https://diarioinso.onrender.com/api/usuarios'; // Asegúrate de reemplazar esto con la URL real de tu API
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   public isAuthenticated = this.isAuthenticatedSubject.asObservable();
 
