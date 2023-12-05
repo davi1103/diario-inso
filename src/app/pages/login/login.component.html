@@ -7,9 +7,11 @@
 
         <label for="correo">Email:</label>
         <input type="email" id="correo" name="correo" formControlName="correo" required>
+        <small *ngIf="correoNoValido">*Ingrese un correo válido, debe incluir un @ y un dominio - ejemplo: nombredeusuario@dominio.com</small>
         
         <label for="contrasena">Contraseña:</label>
         <input type="password" id="contrasena" name="contrasena" formControlName="contrasena" required>
+        <small *ngIf="contrasenaNoValido">*Ingrese una contraseña de mínimo 8 caracteres</small>
         
         <button type="submit">Ingresar</button>
       </form>

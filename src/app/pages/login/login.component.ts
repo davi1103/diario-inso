@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 
 export class LoginComponent implements OnInit {
     form!: FormGroup;
+    mostrarContrasena: boolean = false;
   
     constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
   
@@ -21,10 +22,19 @@ export class LoginComponent implements OnInit {
   
     inicializarFormularioLogin(): void {
       this.form = this.fb.group({
-        correo: ['', [Validators.required, Validators.email]],
-        contrasena: ['', [Validators.required, Validators.minLength(6)]]
+        correo:['', [Validators.required , Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
+        contrasena: ['', [Validators.required, Validators.minLength(8)]]
       });
     }
+
+    get correoNoValido(){
+      return this.form.get('correo')?.invalid && this.form.get('correo')?.touched;
+    }
+  
+    get contrasenaNoValido(){
+      return this.form.get('contrasena')?.invalid && this.form.get('contrasena')?.touched;
+    }
+
   
     onSubmit(): void {
       if (this.form.valid) {
@@ -45,7 +55,7 @@ export class LoginComponent implements OnInit {
         // Maneja el error de validación del formulario
         console.error('El formulario no es válido');
         this.authService.setAuthState(false);
-        alert('Porfavor complete los campos')
+        alert('Porfavor complete los campos correctamente')
       }
     }
   

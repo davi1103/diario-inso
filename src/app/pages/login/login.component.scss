@@ -45,6 +45,9 @@
           display: block;
           margin-bottom: 10px;
         }
+        small{
+          color: red;
+        }
     
         input {
           width: 100%;
@@ -68,6 +71,21 @@
           &:hover {
             background-color: #0056b3;
           }
+        }
+        .input-group {
+          align-items: center;
+          display: flex;
+          position: relative;
+
+          
+        }
+        
+        .toggle-password {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          background: none;
+          border: none;
         }
     }
 }
