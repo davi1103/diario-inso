@@ -1,0 +1,26 @@
+/* footer.component.scss */
+.footer {
+    background-color: #2A3D66; /* Un color suave que no distraiga */
+    padding: 1rem 0;
+    border-top: 1px solid #fdfafa; /* Una línea sutil para delimitar el footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between; /* Separa los elementos a cada extremo */
+    align-items: center;
+  }
+  
+  .text-muted {
+    color: #f5f5f5; /* Un color neutro para el texto */
+    font-size: 0.9rem;
+    margin-left: 2.5em;
+
+    
+  }
+  .float-right{
+    margin-right: 2.5em;
+  }

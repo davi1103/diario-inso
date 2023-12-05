@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="form-container">
+    <h2>Crear Nueva Entrada</h2>
+    <form [formGroup]="entradaForm" (ngSubmit)="crearEntrada()">
+      <div>
+        <label for="titulo" >Título:</label>
+        <input formControlName="titulo" id="titulo" required maxlength="70">
+        <small *ngIf="tituloNoValido">*Este campos es obligatorio</small>
+        <small *ngIf="limiteTituloAlcanzado">*Has alcanzado el límite de caracteres permitidos.</small>
+      </div>
+      <div>
+        <label for="descripcion">Descripción:</label>
+        <textarea formControlName="descripcion" id="descripcion" required maxlength="1000"></textarea>
+        <small *ngIf="descripcionNoValido">*Este campos es obligatorio</small>
+        <small *ngIf="limiteDescripcionAlcanzado">*Has alcanzado el límite de caracteres permitidos.</small>
+      </div>
+      <div>
+        <label for="imagen">Imagen:</label>
+        <input type="file" formControlName="imagen" id="imagen" (change)="onFileChange($event)" required>
+        <small *ngIf="imagenNoValido">*Este campos es obligatorio</small>
+      </div>
+      <button type="submit" [disabled]="!entradaForm.valid">Crear Entrada</button>
+    </form>
+    
+  </div>
+</div>

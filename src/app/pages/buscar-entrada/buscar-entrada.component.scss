@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  background-image: url('/assets/1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .sub-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70em;
+    max-width: 80%;
+    margin: auto;
+    padding: 2em;
+    animation: fadeIn 0.5s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 40px;
+    align-items: center;
+
+    .text-container {
+      font-family: 'Open Sans', sans-serif;
+      color: #2A3D66;
+      text-align: center;
+    }
+
+    .buscar-container{
+      width: 96.5%;
+      display: flex;
+      background-color: rgb(235, 235, 235);
+      padding: 20px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      
+      
+
+      .buscar{
+          margin: 0 60px;
+          text-align: center;
+          
+
+          input{
+              margin-right: 1em;
+              margin-bottom: 1em;
+              padding: 1em;
+              border-radius: 3px;
+              border-color: #2A3D66;
+              font-family: 'Times New Roman', Times, serif;
+              font-style: italic;
+          }
+
+          button{
+              padding: 1em; 
+              min-width: 100px ;
+              border-radius: 10px;
+              background-color: #2A3D66;
+              color: white;
+              cursor: pointer;
+              transition: all 0.3s;
+
+              &:hover{
+                  background-color: #395ead; 
+              }
+          }
+      }
+  }
+
+  .entradas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; // Centrar las tarjetas de entradas
+    gap: 2rem; // Espacio entre las tarjetas de entrada
+
+      .entrada-card {
+        background: #ffffff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        width: 100%; // O un ancho máximo si las tarjetas son muy anchas
+        max-width: 800px; // Un ancho máximo razonable para la legibilidad
+        margin-bottom: 2rem;
+        padding-left: 40px;
+
+        &:hover {
+          box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .titulo {
+          font-size: 2em;
+          color: #2A3D66;
+          margin-bottom: 0.5em;
+          text-align: center; // Centrar el título de cada entrada
+        }
+
+        .descripcion {
+          color: #666;
+          font-size: 1.4em;
+          margin-bottom: 0.5em;
+        }
+
+        .fecha {
+          color: #999;
+          font-size: 1.1em;
+          margin-bottom: 1em;
+        }
+
+        img {
+          display: block; // Asegura que la imagen no sea inline
+          max-width: 100%;
+          height: auto;
+          margin: 0 auto; // Centra la imagen
+          border-radius: 8px;
+        }
+      }
+
+      .no-entradas {
+        text-align: center;
+        color: #999;
+      }
+    }
+  }
+}

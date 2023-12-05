@@ -1,0 +1,19 @@
+<nav class="navbar">
+
+    <a *ngIf="!isUserAuthenticated" class="navbar-brand" style="text-decoration: none;" href="/">
+      <span class="nombre1">Mi Diario Personal</span>
+    </a>
+
+    <a *ngIf="isUserAuthenticated" class="navbar-brand" style="text-decoration: none;" routerLink="/home">
+      <span class="nombre1">Mi Diario Personal</span>
+    </a>
+
+    <div *ngIf="!isUserAuthenticated" class="navbar-buttons">
+      <button class="btn" routerLink="/register">REGISTRARSE</button>
+      <button class="btn" routerLink="/login">INICIAR SESIÓN</button>
+    </div>
+
+    <div *ngIf="isUserAuthenticated" class="navbar-buttons">
+      <button class="btn" (click)="logout()">Cerrar sesión</button>
+    </div>
+  </nav>

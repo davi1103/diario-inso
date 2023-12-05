@@ -1,0 +1,133 @@
+.container {
+    background-image: url('/assets/f3.jpg');
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-width: 100vh;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+    .formulario {
+      background-color: rgba(255, 255, 255, 0.8); // Fondo semi-transparente para que la imagen sea visible
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px); // Efecto de desenfoque para mejorar la legibilidad
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 30%;
+      padding: 4em;
+      margin-top: 2em;
+      
+     
+
+        
+
+        
+        .form-row{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 9px;
+          width: 100%;
+
+          small{
+            color: red;
+          }
+
+          .form-group{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+
+            &:not(:last-child) {
+              margin-right: 40px; // Espacio entre los campos de la misma fila
+            }
+
+            
+          }
+        }
+
+        .title{
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+
+            h2 {
+                margin-bottom: 20px;
+                
+              }
+        }
+    
+        label,
+        input,
+        select {
+          display: block;
+          margin-bottom: 10px;
+        }
+        small{
+            color: red;
+          }
+    
+        input,
+        select {
+          width:calc(100% - 20px);
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        .descripcion{
+          height: 10em;
+        }
+    
+      
+
+          .btn-disabled {
+            position: relative;
+            background-color: #ccc; // Un color gris para indicar que está deshabilitado
+            cursor: not-allowed;
+            margin-left: 40%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+          }
+          
+          // Estilo cuando el botón está habilitado
+          .btn-enabled {
+            position: relative;
+            background-color: #007bff;
+             color: #fff;
+            cursor: pointer;
+            margin-left: 40%;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: #0056b3;
+            }
+          }
+
+          .input-group {
+            align-items: center;
+            display: flex;
+            position: relative;
+
+            
+          }
+          
+          .toggle-password {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: none;
+            border: none;
+          }
+          
+        }
+}

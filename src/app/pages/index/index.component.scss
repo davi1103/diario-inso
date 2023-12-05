@@ -1,0 +1,151 @@
+.section_intro {
+  padding: 200px px 20px;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 2 px; /* Opcional: Ajusta la altura según sea necesario */
+  h2 {
+      margin-bottom: -50px; /* Ajusta el valor según quieras reducir el espacio */
+      font-family:cursive;
+      font-size: 30px;
+      color: #26568d;
+  }
+
+  h4, p {
+      margin-bottom: -10px; /* Ajusta el valor según quieras reducir el espacio */
+      font-family: monospace;
+      color: black;
+      font-size: 15px;
+  }
+}
+
+.fondo {
+  width: 100%;
+  height: auto;
+  border-top: 10px solid black; // Se agregó 'solid' para definir el estilo del borde
+  border-bottom: 10px solid black;
+}
+
+.container_principal {
+display: flex;
+flex-direction: row; /* La división es horizontal */
+height: 50vh; /* 100% de la altura de la ventana */
+margin-top: 10px; /* Puedes ajustar el valor según tus necesidades */
+margin-bottom: 40px;
+
+
+.container_imagen,
+.container_texto {
+flex: 1; /* Ocupa el 50% del espacio disponible horizontalmente */
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #feffff; /* Color de fondo del contenedor de la imagen y el texto */
+}
+
+.container_imagen img {
+max-width: 100%; /* La imagen se ajusta al ancho máximo del contenedor */
+height: auto;
+max-height: 100%; /* Altura máxima de la imagen */
+}
+
+.container_texto p {
+margin: 20px; /* Ajusta el margen según sea necesario */
+text-align: center;
+font-size: 20px; /* Tamaño de letra */
+color: rgb(38, 41, 70)f3f; /* Color de letra */
+font-family:  'Oswald'; /* Tipo de letra */
+}
+}
+
+.container_secundario {
+display: flex;
+flex-direction: row; /* La división es horizontal */
+height: 50vh; /* 100% de la altura de la ventana */
+margin-top: 80px; /* Ajusta el margen superior según tus necesidades */
+margin-bottom: 100px; 
+
+.container_imagen,
+.container_texto {
+flex: 1; /* Ocupa el 50% del espacio disponible horizontalmente */
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #ffffff; /* Color de fondo del contenedor de la imagen y el texto */
+}
+
+.container_imagen img {
+max-width: 100%; /* La imagen se ajusta al ancho máximo del contenedor */
+height: auto;
+max-height: 100%; /* Altura máxima de la imagen */
+}
+
+.container_texto p {
+margin: 20px; /* Ajusta el margen según sea necesario */
+text-align: center;
+font-size: 20px; /* Tamaño de letra */
+color: rgb(38, 41, 70)f3f;  /* Color de letra */
+font-family:  'Oswald'; /* Tipo de letra */
+}
+}
+
+
+.fondo_largo {
+  background-image: url('/assets/laptop.png'); /* Ruta de tu imagen de fondo */
+  background-size: cover;
+  background-position: center;
+  height: 150px; /* Altura deseada para la sección */
+  margin-top: 40px; /* Puedes ajustar el valor según tus necesidades */
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: white; /* Color del texto */
+    text-align: center;
+    font-size: 36px; /* Tamaño del texto */
+  }
+  
+  }
+
+  .container_imagenes_redondas {
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  
+    .column {
+      flex: 1 1 30%;
+      margin: 10px;
+      text-align: center;
+  
+      img {
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        margin-top: 20px;
+      }
+  
+      p {
+        margin-top: 20px;
+        font-size: 20px;
+        color: #1d0f4f;
+        font-family: 'Serif'; // Asegúrate de que 'Serif' esté importado en tu proyecto si es una fuente personalizada
+        font-weight: bold;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container_imagenes_redondas .column {
+      flex: 1 1 45%;
+    }
+  }

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="formulario">
+      <div class="title">
+        <h2>Formulario de Registro</h2>
+      </div>
+      <form [formGroup]="forms" (ngSubmit)="registrar()" >
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre: </label>
+            <input type="text" id="nombre" name="nombre" formControlName="nombre" [class.is-invalid]="nombreNoValido" required>
+            <small *ngIf="nombreNoValido">*Este campos es obligatorio</small>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+              <label for="correo">Correo: </label>
+              <input type="email" id="correo" name="correo" formControlName="correo" [class.is-invalid]="correoNoValido" required>
+              <small *ngIf="correoNoValido">*Ingrese un correo válido, debe incluir un @ y un dominio - ejemplo: nombredeusuario@dominio.com</small>
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="contrasena">Contraseña:</label>
+          <div class="input-group">
+            <input [type]="mostrarContrasena ? 'text' : 'password'" id="contrasena" name="contrasena" formControlName="contrasena" [class.is-invalid]="contrasenaNoValido" required>
+            <button type="button" class="toggle-password" (click)="toggleMostrarContrasena()">
+              <i [class]="mostrarContrasena ? 'fa fa-eye-slash' : 'fa fa-eye'"></i>
+            </button>
+          </div>
+          <small *ngIf="contrasenaNoValido">*Ingrese una contraseña de mínimo 8 caracteres, incluir numeros, mayusculas y minúsculas</small>
+        </div>
+        
+        
+        
+        <button  type="submit" [disabled]="!forms.valid" [class.btn-disabled]="!forms.valid" [class.btn-enabled]="forms.valid">Registrar</button>
+      </form>
+    </div>
+  </div>

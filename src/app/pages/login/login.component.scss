@@ -1,0 +1,73 @@
+
+.container {
+    background-image: url('/assets/f3.jpg');
+    background-size: 100% ; // Ajusta el tamaño de la imagen para cubrir todo el contenedor
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 20px;
+    width: 100%; // Ajusta el tamaño del contenedor para ocupar toda la pantalla
+    min-width: 100vh;
+    min-height: 100vh;
+    max-width: 97.3%; // Máximo ancho del contenedor
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+
+  
+    .formulario {
+      background-color: rgba(255, 255, 255, 0.8); // Fondo semi-transparente para que la imagen sea visible
+      padding: 20px;
+      border-radius: 10px;
+      backdrop-filter: blur(5px); // Efecto de desenfoque para mejorar la legibilidad
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 30%;
+      height: 100%;
+      max-height: 20%;
+      padding: 4em;
+      margin-top: 2em;
+
+        
+        .title{
+            text-align: center;
+            justify-content: center;
+            width: 100%;
+
+            h2 {
+                margin-bottom: 20px;
+                
+              }
+        }
+    
+        label,
+        input {
+          display: block;
+          margin-bottom: 10px;
+        }
+    
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+    
+        button {
+          align-items: center;
+          text-align: center;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          margin-left: 40%;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: all 0.3s;
+    
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.container{
+    background-image: url('/assets/1.jpg');
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-width: 100vh;
+    min-height: 90vh;
+    position: relative;
+    align-content: center;
+    align-items: center;
+    display: grid;
+    place-items: center;
+    
+
+    .boton-container{
+
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 30px;
+        display: flex; // Usa flexbox para centrar los elementos internos
+        justify-content: center; // Centra los elementos horizontalmente dentro de .boton-container
+        align-items: center; // Centra los elementos verticalmente dentro de .boton-container
+        width: auto; // Se ajustará al contenido interno
+        min-height: 5em;
+
+        .buscar,
+        .crear{
+            padding: 15px 30px; // Aumenta el padding para hacer los botones más grandes
+            font-size: 1.2em; // Aumenta el tamaño de la fuente para que sea más legible
+            color: white; // Color de texto blanco
+            background-color: #FF847C; // Un color coral suave
+            border: none; // Sin bordes
+            border-radius: 15px; // Bordes redondeados
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Sombra para dar profundidad
+            transition: all 0.3s; // Transición suave para los efectos de hover
+            cursor: pointer; // Cambia el cursor a un puntero para indicar que es clickable
+            margin: 0 30px; // Espacio entre los botones
+            outline: none; // Remueve el borde al hacer clic
+
+            
+        }
+
+        .buscar:hover,
+            .crear:hover{
+                background-color: #824f56; // Oscurece el color al pasar el ratón por encima
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+
+            }
+        
+    }
+}

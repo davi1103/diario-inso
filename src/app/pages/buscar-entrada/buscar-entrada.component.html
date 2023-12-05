@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="sub-container">
+    <div class="buscar-container">
+      <div class="buscar">
+        <input type="text" [(ngModel)]="searchTerm" placeholder="Buscar entrada...">
+        <button (click)="buscarEntradasText()">Buscar</button>
+      </div>
+    
+      <div class="buscar">
+        <input type="date" [(ngModel)]="fecha" placeholder="Buscar entrada...">
+        <button (click)="buscarEntradasDate()">Buscar</button>
+      </div>
+    </div>
+    <div class="text-container">
+      <h2>Entradas Encontradas</h2>
+    </div>
+    <div class="entradas-container">
+      <div *ngFor="let entrada of entradas" class="entrada-card">
+        <h2 class="titulo">{{ entrada.titulo }}</h2>
+        <p class="descripcion">{{ entrada.descripcion }}</p>
+        <p class="fecha">{{ formatDate(entrada.fecha) }}</p>
+        <img *ngIf="entrada.imagenUrl" [src]="entrada.imagenUrl" class="entrada-imagen">
+      </div>
+      
+  
+      <!-- Mensaje si no se encontraron entradas -->
+      <div *ngIf="entradas.length === 0">
+        <p>No se encontraron entradas.</p>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+ 
