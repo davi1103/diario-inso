@@ -18,7 +18,7 @@ export class BuscarEntradaComponent {
   constructor(private sanitizer: DomSanitizer, private http: HttpClient, private router: Router) { }
 
   buscarEntradasText() {
-    this.http.get<any[]>(`http://localhost:5000/api/entradas/buscarTexto?searchTerm=${this.searchTerm}`, {withCredentials:true}).subscribe(
+    this.http.get<any[]>(`https://diarioinso.onrender.com/api/entradas/buscarTexto?searchTerm=${this.searchTerm}`, {withCredentials:true}).subscribe(
       (response) => {
         this.entradas = response.map(entrada => ({
           ...entrada,
